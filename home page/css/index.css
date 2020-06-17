@@ -1,0 +1,972 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*顶部logo*/
+.header-logo{
+    height: 130px;
+    width: 100%;
+    text-align: center;
+}
+.header-logo img{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.header-logo p{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/*导航*/
+.nav{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #f7f7ff;
+    border-top: 1px solid #008cd6;
+    position: relative;
+    
+}
+.nav.nav1{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.nav-warp{
+    /*width: 1200px;*/
+    margin: 0 auto;
+}
+.nav-warp ul{
+    display: flex;
+    justify-content: center;
+} 
+.nav-warp ul .li{
+    margin-right: 35px;
+    margin-left: 35px;
+    text-align: center;
+    position: relative;
+}
+.nav-warp ul .li .a{
+    font-size: 14px;
+    display: block;
+   font-weight: bold;
+   color: black;
+   position: relative;
+}
+
+.nav-warp ul .li .first{
+    color: #008cd6;
+}
+.nav-warp ul .li .a::after{
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    background-color: #008cd6;
+    position: absolute;
+    bottom: 0;
+}
+.nav-warp ul .first:first-child::after{
+    width: 28px; 
+}
+.nav-warp ul .li .a:not(.first)::after{
+    display: none;
+}
+.nav-warp ul .li .a:hover::after{
+    display: block;
+    background-color: #de6c00;
+}
+.nav-warp ul .li .a:hover{
+    color: #de6c00;
+}
+.nav-warp ul .li::after{
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: gray;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-right: -30px;
+}
+.nav-warp ul .li:last-child::after{
+    display: none;
+}
+/*隐藏导航*/
+.bar-hide{
+    height: 300px;
+    width: 1200px;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+.nav-hide1-left ul li a{
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+}
+.nav-hide1-left ul li a:hover{
+    color: #008cd6 ;
+}
+
+.nav-hide1-left{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: -100px;
+}
+.nav-hide1-left ul{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+.nav-hide1-right{
+    margin-top: 20px;
+}
+.nav-hide1{
+    left: -369px;
+}
+/*2*/
+.nav-hide2{
+    left: -495px;
+}
+.nav-ul-left{
+    margin-top: 88px;
+    line-height: normal;
+}
+.nav-ul-title{
+    font-size: 12px;
+    color: black;
+    margin-bottom: 20px;
+}
+.nav-ul-title1{
+    margin-top: 20px;
+}
+#nav-hide li:not(.nav-ul-title) a{
+    font-size: 12px;
+    color: #777777;
+}
+/*3*/
+.nav-hide3{
+    left: -621px;
+}
+.nav-hide3-left{
+    margin-top: 40px;
+   align-items: baseline;
+}
+.nav-hide3-left ul li{
+    line-height: normal;
+}
+.nav-hide3-left ul li:first-child{
+    margin-bottom: 20px;
+}
+
+.nav-hide3-box ul li a{
+    font-size: 12px;
+    color: #777777;
+}
+.nav-hide3-left ul li .hide3-first{
+    font-size: 14px;
+    color: black;
+}
+/*4*/
+.nav-hide4{
+    left: -747px;
+}
+/*5*/
+.nav-hide5{
+    left: -873px;
+}
+
+.li:hover .bar-hide{
+    display: flex;
+    z-index: 999;
+}
+
+/*导航logo*/
+.nav-logo{
+    position: absolute;
+    right:11%;
+    bottom: 0px;
+}
+.nav-logo-sou,.nav-logo-weixin{
+    display: inline-block;
+    position: relative;
+}
+.nav-logo span{
+    font-size: 1.4em;
+    margin-left: 10px;
+}
+.nav-logo span:hover{
+    color: #008cd6;
+    cursor: pointer;
+}
+
+/*搜索框*/
+.nav-sousuo{
+    height: 60px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #008cd6;
+    box-shadow: 0px 5px 5px #BABABA;
+    display: none;
+    position: relative;
+    z-index: 5;
+}
+.sousuo-warp{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.sousuo-warp input{
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    padding-left: 30px;
+    border: 2px solid #008cd6;
+}
+.sousuo-warp span{
+    position: absolute;
+    left: 10px;
+    top: 1px;
+    font-size: 20px;
+    color: #008cd6;
+}
+/*微信*/
+.weixin{
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    width: 150px;
+    height: 300px;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding-top: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 10;
+}
+.weixin .weixin-logo{
+    width: 120px;
+    height: auto;
+}
+.weixin p{
+    font-size: 13px;
+}
+.weixin .ico{
+    width: 110px;
+    height: 110px;
+}
+.nav-logo-weixin:hover .weixin{
+    display: block;
+}
+
+
+/*第二套顶部 最后隐藏*/
+.header2{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    display: none;
+}
+.header2-left{
+   position: absolute;
+   left: 10px;
+   cursor: pointer;
+}
+.header2-left span{
+    font-size: 25px;
+}
+.header2-right{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.header2-right img{
+   height: 30px;
+   width: auto;
+   margin-top: 15px;
+}
+/*点击过后的导航*/
+.nav2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    z-index: 9999;
+}
+.nav2-top{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #008cd6;
+   position: relative;
+}
+.nav2-left{
+    position: absolute;
+    left: 10px;
+}
+.nav2-left span{
+    color: white;
+    font-size: 25px;
+}
+.nav2-left span:hover{
+     color: #333333;
+}
+.nav2-right{
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #81c31f;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+}
+.nav2-bot{
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.nav2-bot .nav2-ul .nav2-li:hover{
+    background-color: white;
+}
+.nav2-li .nav2-a{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+.nav2-li .nav2-a:hover{
+    color: #008cd6;
+}
+.nav2-li{
+    position: relative;
+}
+.nav2-li::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100px;
+    background-color:#008cd6 ;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 57px;
+    display: none;
+}
+.nav2-li:hover .nav2-a{
+    color: #ed6c00;
+}
+.nav2-li:hover::after{
+    background-color: #ed6c00;
+    display: block;
+}
+.nav2-li2::after{
+    display: block;
+}
+
+
+/*1*/
+.nav2-hide ul li a{
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+}
+.nav2-hide ul li a:hover{
+    color: #008cd6;
+}
+.nav2-hide1{
+    display: flex;
+    justify-content: space-around;
+}
+/*测试隐藏*/
+.nav2-hide1{
+    display: none;
+}
+/*2*/
+.nav2-hide2 .nav2-hide2-title li{
+    line-height: normal;
+}
+.nav2-hide2 .nav2-hide2-title li a{
+    font-size: 12px;
+}
+.nav2-hide2 .nav2-hide2-title li:first-child a{
+    line-height: 60px;
+    font-size: 14px;
+}
+.nav2-hide2 ul:last-child li{
+    line-height: 40px;
+}
+/*隐藏*/
+.nav2-hide2{
+    display: none;
+}
+
+/*3*/
+.nav2-hide3{
+    display: flex;
+    justify-content: space-around;
+}
+.nav2-hide3 ul li a{
+    font-size: 12px;
+}
+.nav2-hide3 ul li{
+    line-height: 20px;
+}
+.nav2-hide3 ul li:first-child a{
+    font-size: 14px;
+}
+.nav2-hide3 ul li:first-child {
+    line-height: 40px;
+}
+/*隐藏*/
+.nav2-hide3{
+    display: none;
+}
+/*4*/
+.nav2-hide4{
+    display: flex;
+    justify-content: space-around;
+}
+/*隐藏*/
+.nav2-hide4{
+    display: none;
+}
+/*鼠标放置显示 有个特殊*/
+.nav2-li-hover:hover .nav2-hide{
+    display: flex;
+}
+.nav2-li-hover1:hover .nav2-hide2{
+    display: block;
+}
+
+/*最后隐藏nav2*/
+.nav2{
+    display: none;
+}
+
+
+
+
+/*第二部分导航的搜索框*/
+.sou2{
+    position: absolute;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: #f7f7f7;
+    z-index: 10000;
+    border-top: 1px solid #008cd6;
+    box-shadow: 2px 2px 5px #333333;
+    display: none;
+}
+.sou2-warp input{
+    position: absolute;
+    left: 5%;
+    width: 85%;
+    height: 40px;
+    top: 13px;
+    padding-left: 30px;
+    box-shadow:0px 0px 3px #333333 inset;
+    border:1px solid #d2d2d2;
+	background-color:transparent;
+}
+.sou2-warp span{
+    position: absolute;
+    left: 6%;
+    top: 2px;
+    color: #bcbcbc;
+    
+}
+/*第二部分的微信*/
+.weixin2{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #f7f7f7;
+    z-index: 20000;
+    text-align: center;
+    padding-top: 20px;
+    display: none;
+    box-shadow: 0px 3px 4px #969696;
+}
+.weixin2 img,p{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.weixin2-logo1{
+    width: 60px;
+    height: auto;
+}
+.weixin2-ico {
+    width: 150px;
+    height: auto;
+}
+/******************************/
+
+
+/*内容部分*/
+.conter{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*第一部分 轮播图*/
+.conter-one{
+    overflow: hidden;
+    position: relative;
+   
+}
+.lunbo-box{
+    width:7200px;
+    transition: all .7s;
+    z-index: -10;  
+} 
+.lunbo-box .lunbo-warp{
+    float: left;
+}
+.page{
+   position: absolute;
+   bottom: 10%;
+   left: 40%;
+   z-index: 10;
+}
+.page li{
+    margin-left: 30px;
+    width: 10px;
+    height: 10px;
+    background-color: #dcdcdc;
+    float: left;
+    cursor: pointer;
+}
+.page .index{
+    margin-top: -2px;
+    width: 15px;
+    height: 15px;
+}
+/*透明盒子*/
+.black{
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    cursor: pointer;
+}
+/*第二部分  点击弹出遮罩层*/
+.bg{
+    border:1px solid black;
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#000;
+    z-index:9999;
+    top:0;
+    left:0;
+    opacity:0.5;
+    }
+.content{
+    display:none;
+    width:500px;
+    height:300px;
+    position:fixed;
+    top:40%;
+    margin-top:-150px;
+    background:#fff;
+    z-index:9999;
+    left:50%;
+    margin-left:-250px;
+    border: 4px solid #008cd6;
+    background-image: url(../images/head-img4.jpg) ;
+    background-size: cover; 
+    text-align: center;
+}
+.content p{
+   display: block;
+   float: right;
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   line-height: 40px;
+   font-size: 20px;
+   color: white;
+   background-color: #008cd6;
+   margin-top: -1px;
+   cursor: pointer;
+}
+.content h4{
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: normal;
+    color: white;
+}
+.content h5{
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+.content h6{
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+/*第二部分*/
+.conter-two {
+    margin-top: 40px;
+    overflow: hidden;
+}
+.conter-two ul{
+    margin: 0 -5px;
+}
+.conter-two ul li{
+   width: 16.666%;
+   float: left;
+}
+
+.conter-two-warp{
+    height: 192px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+.conter-two ul li:nth-child(3n+1) .conter-two-warp{
+    background-color: #0094da;
+}
+.conter-two ul li:nth-child(3n+2) .conter-two-warp{
+    background-color: #8ec31f;
+}
+.conter-two ul li:nth-child(3n+3) .conter-two-warp{
+    background-color: #ed6d00;
+}
+.conter-two-warp h4{
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 400;
+}
+.conter-two-warp h3{
+   line-height: 100px;
+   position: relative;
+   font-size: 3rem;
+   color: white;
+   font-weight: 400;
+}
+.conter-two-warp h3::after{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #dddddd;
+    position: absolute;
+    top: 1;
+    left: 10%;
+}
+
+
+
+/*第三部分 题目*/
+.conter-three{
+    padding-top: 100px;
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+.conter-title {
+    width: 300px;
+    height: 80px;
+    margin: 0 auto;
+    position: absolute;
+    margin-bottom: 20px;
+    top: 0;
+    left: 50%;
+    z-index: 200;
+    margin-left: -150px; 
+    text-align: center;
+
+}
+.conter-title p{
+    display: block;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 100%;
+}
+.conter-title span{
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 12px;
+}
+.conter-title p::after{
+    content: "";
+    display: block;
+    height: 60px;
+    width: 3px;
+    background-color: #888888;
+    position: absolute;
+    top: 5px;
+}
+.conter-title p::before{
+    content: "";
+    display: block;
+    height: 60px;
+    width: 3px;
+    background-color: #888888;
+    position: absolute;
+    right: 1px;
+    top: 4px;
+}
+/*第三部分 轮播图*/
+.conter-three-lunbo{
+    overflow: hidden;
+    position: relative;
+}
+.lunbo1-box{
+    width: 12000px;
+    transition: all .7s;  
+    position: relative;
+    top:550px;
+}
+.lunbo1-box .lunbo1-warp{
+    float: left;
+    width: 1200px;
+}
+.lunbo1-warp img{
+    width: 100%;
+    height: 100%;
+}
+.btn-left{
+    height: 99%;
+    width: 12%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0,.5);
+    cursor: pointer;
+}
+.btn-left span{
+    background-color: #d5d7de;
+    position: absolute;
+    top: 48%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+}
+.btn-right{
+    height: 99%;
+    width: 12%;
+    position: absolute;
+    right:0;
+    top: 0;
+    background-color: rgba(0, 0, 0,.5);
+    cursor: pointer;
+}
+.btn-right span{
+    background-color: #d5d7de;
+    position: absolute;
+    top: 48%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+
+
+ /*第四部分*/ 
+ .conter-four{
+    padding-top: 100px;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+ }  
+ .conter-four-box ul li{
+    float: left;
+    width: 25%;
+    position: relative;
+    left: 0;
+}
+.conter-four-box ul{
+    margin: 0 -10px;
+}
+.conter-four-warp{
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 100px;
+}
+.conter-four-box ul li img{
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+.conter-four-box ul li p{
+    position: absolute;
+    bottom: -60px;
+    display: block;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f7f7f7;
+    text-align: left;
+    text-indent: 2em;
+}
+.conter-four-box ul li p:hover{
+    background-color: white;
+    box-shadow:0px 0px 2px #969696;
+    cursor: pointer;
+}
+
+
+/*第五部分*/
+.conter-five{
+    width: 100%;
+    margin-top: 60px;
+}
+.conter-five ul{
+    width: 100%;
+    overflow: hidden;
+}
+.conter-five ul li{
+    margin-bottom: 40px;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+}
+.conter-five-left{
+    position: absolute;
+    left: 5%;
+    top: 12%;
+}
+.conter-five-left{
+    height: 30%;
+    width: auto;
+}
+.conter-five-right{
+    height: 100%;
+    width: auto;
+}
+
+.conter-five ul li:first-child{
+    background-color: #a9d068;
+}
+.conter-five ul li:nth-child(2n){
+    background-color: #f99f6d;
+}
+.conter-five ul li:nth-child(3n){
+    background-color: #6dcff6;
+}
+.conter-five-right{
+    position: absolute;
+    right: 5%;
+    top: 0;
+    height: 100%;
+}
+
+
+/*底部*/
+
+.footer{
+    width: 100%;
+}
+/*底部第一部分*/
+.footer-one{
+    height: 250px;
+    background-image: url(../images/culturebg.png);
+    position: relative;
+}
+.footer-one-left{
+   position: absolute;
+   left: 5%;
+   top: 0;
+   height: 100%;
+   width: auto;
+}
+.footer-one-right{
+   position: absolute;
+   right: 5%;
+   bottom: 0;
+   height: 100%;
+   width: auto;
+}
+/*底部第二部分*/
+.footer-two{
+    width: 100%;
+    height: 100px;
+    background-color: #0094da;
+    display: flex;
+    justify-content: center;
+}
+.footer-two img{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    max-height: 40px;
+    width:auto;
+    cursor: pointer;
+}
+
+/*顶部第三部分*/
+.footer-three{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #4c4948;
+    color: white;
+}
+.footer-three p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.footer-three-text {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.footer-three .span{
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/*顶部第四部分*/
+.footer-four{
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-top: 1px solid white;
+   text-align: center;
+   font-size: 12px;
+   background-color: #4c4948;
+   color: white;
+}  
