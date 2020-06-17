@@ -1,2 +1,2 @@
 # home-page
-reactive home page 
+Responsive page
